@@ -1,0 +1,83 @@
+/* Body background and general styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at center, #1e3a8a, #152d67, #0e214d);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Game board styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #3b4b68;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+}
+
+/* 3D effect for game cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #b0bec5;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2),
+                -4px -4px 12px rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.4),
+                -8px -8px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Winning cells get a special highlight */
+.cell.win {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Restart button styling */
+#restartButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Status display styling */
+#statusDisplay {
+    margin-top: 15px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Container to hold game elements and center them */
+.container {
+    text-align: center;
+}
